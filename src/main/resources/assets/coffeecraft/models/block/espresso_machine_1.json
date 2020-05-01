@@ -1,0 +1,6 @@
+{
+    "parent": "coffeecraft:block/espresso_machine_up",
+	"textures": {
+		"parts": "coffeecraft:block/espresso_machine_parts_cup"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"entity.villager.work_barista": {
+		"subtitle": "subtitles.block.espresso_machine.brew",
+		"sounds": [
+			"coffeecraft:block/decanter/place",
+			"coffeecraft:block/espresso_machine/portafilter",
+			"coffeecraft:block/espresso_machine/steam"
+		]
+	}
+}

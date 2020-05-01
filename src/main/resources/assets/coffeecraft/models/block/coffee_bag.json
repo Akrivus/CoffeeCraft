@@ -1,0 +1,55 @@
+{
+    "parent": "block/block",
+    "textures": {
+        "side": "coffeecraft:block/coffee_bag_side",
+        "inside": "coffeecraft:block/coffee_bag_bottom",
+        "top": "coffeecraft:block/coffee_bag_top",
+        "bottom": "coffeecraft:block/coffee_bag_bottom",
+        "particle": "coffeecraft:block/coffee_bag_side"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 2, 16 ],
+            "faces": {
+                "up": { "texture": "#inside" },
+                "down": { "texture": "#bottom" }
+            }
+        },
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 2, 16, 16 ],
+            "faces": {
+                "up": { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west": { "texture": "#side" },
+                "east": { "texture": "#side" }
+            }
+        },
+        {   "from": [ 14, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "up": { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west": { "texture": "#side" },
+                "east": { "texture": "#side" }
+            }
+        },
+        {   "from": [ 2, 0, 0 ],
+            "to": [ 14, 16, 2 ],
+            "faces": {
+                "up": { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" }
+            }
+        },
+        {   "from": [ 2, 0, 14 ],
+            "to": [ 14, 16, 16 ],
+            "faces": {
+                "up": { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" }
+            }
+        }
+    ]
+}

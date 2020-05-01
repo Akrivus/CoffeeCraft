@@ -1,0 +1,9 @@
+{
+	"variants": {
+		"level=0": { "model": "coffeecraft:block/drying_mat_0" },
+		"level=1": { "model": "coffeecraft:block/drying_mat_1" },
+		"level=2": { "model": "coffeecraft:block/drying_mat_2" },
+		"level=3": { "model": "coffeecraft:block/drying_mat_3" },
+		"level=4": { "model": "coffeecraft:block/drying_mat_4" }
+	}
+}

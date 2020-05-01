@@ -1,0 +1,13 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "coffeecraft:green_coffee_beans"
+                }
+            ]
+        }
+    ]
+}
