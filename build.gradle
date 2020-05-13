@@ -6,31 +6,30 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: 'com.github.jengelman.gradle.plugins', name: 'shadow', version: '4.0.4'
     }
 }
-
+apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
+version = new Date().format('1.0.yyMMdd')
+archivesBaseName = "CoffeeCraft"
+group = "coffeecraft.mod"
+
 sourceCompatibility = compileJava.sourceCompatibility = '1.8'
 targetCompatibility = compileJava.targetCompatibility = '1.8'
 
-group = 'mod.coffeecraft'
-archivesBaseName = 'CoffeeCraft'
-version = '1.0.0'
-
 minecraft {
-    mappings channel: 'snapshot', version: '20200225-1.15.1'
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-
+    mappings channel: 'snapshot', version: '20190719-1.14.3'
     runs {
         client {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
             mods {
-                coffeecraft {
+                restfulcraft {
                     source sourceSets.main
                 }
             }
@@ -40,7 +39,7 @@ minecraft {
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
             mods {
-                coffeecraft {
+                restfulcraft {
                     source sourceSets.main
                 }
             }
@@ -49,41 +48,51 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
-            args '--mod', 'coffeecraft', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'restfulcraft', '--all', '--output', file('src/generated/resources/')
             mods {
-                coffeecraft {
+                restfulcraft {
                     source sourceSets.main
                 }
             }
         }
     }
 }
-
+repositories { mavenCentral() }
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.15.2-31.1.43'
+    minecraft 'net.minecraftforge:forge:1.15.2-31.1.87'
 }
-
 jar {
     manifest {
         attributes([
-            'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-            'Implementation-Title': 'CoffeeCraft',
-            'Implementation-Vendor': 'Owen Adrian',
-            'Implementation-Version': "${version}",
-            'Specification-Title': 'coffeecraft',
-            'Specification-Vendor': 'Owen Adrian',
-            'Specification-Version': '1',
+            "Implementation-Title": project.name, "Implementation-Vendor": "Owen Adrian",
+            "Implementation-Version": "${version}",
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+            "Specification-Title": "CoffeeCraft", "Specification-Vendor": "Owen Adrian",
+            "Specification-Version": "1",
             'FMLAT': 'accesstransformer.cfg'
         ])
     }
 }
+shadowJar {
+	configurations = [project.configurations.shadow]
+}
+reobf {
+    shadowJar { }
+}
 
-jar.finalizedBy('reobfJar') 
-
+artifacts {
+    archives shadowJar
+}
+def reobfFile = file("$buildDir/reobfJar/output.jar")
+def reobfArtifact = artifacts.add('default', reobfFile) {
+	tasks.build.dependsOn tasks.shadowJar
+    type 'jar'
+    builtBy 'reobfJar'
+}
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifact jar
+            artifact reobfArtifact
         }
     }
     repositories {
