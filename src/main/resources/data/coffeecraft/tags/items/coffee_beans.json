@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "coffeecraft:green_coffee_beans",
+    "coffeecraft:light_roasted_coffee_beans",
+    "coffeecraft:medium_roasted_coffee_beans",
+    "coffeecraft:dark_roasted_coffee_beans",
+    "coffeecraft:burnt_coffee_beans"
+  ]
+}

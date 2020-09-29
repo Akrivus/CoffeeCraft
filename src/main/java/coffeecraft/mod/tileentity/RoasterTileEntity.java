@@ -3,87 +3,75 @@ package coffeecraft.mod.tileentity;
 import coffeecraft.mod.init.CoffeeCraft;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.LockableTileEntity;
-import net.minecraft.util.Direction;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 
-public class RoasterTileEntity extends LockableTileEntity implements ISidedInventory, ITickableTileEntity {
-	
-	public RoasterTileEntity() {
-		super(CoffeeCraft.TileEntities.ROASTER.get());
-	}
+public class RoasterTileEntity extends LockableTileEntity implements ITickableTileEntity {
+    private final NonNullList<ItemStack> items = NonNullList.withSize(18, ItemStack.EMPTY);
 
-	@Override
-	public int getSizeInventory() {
-		return 0;
-	}
+    public RoasterTileEntity() {
+        super(CoffeeCraft.TileEntities.ROASTER.get());
+    }
 
-	@Override
-	public boolean isEmpty() {
-		return false;
-	}
+    @Override
+    public void tick() {
 
-	@Override
-	public ItemStack getStackInSlot(int index) {
-		return null;
-	}
+    }
 
-	@Override
-	public ItemStack decrStackSize(int index, int count) {
-		return null;
-	}
+    @Override
+    protected ITextComponent getDefaultName() {
+        return new TranslationTextComponent("container.roaster");
+    }
 
-	@Override
-	public ItemStack removeStackFromSlot(int index) {
-		return null;
-	}
+    @Override
+    public int getSizeInventory() {
+        return 18;
+    }
 
-	@Override
-	public void setInventorySlotContents(int index, ItemStack stack) {
-		
-	}
+    @Override
+    public boolean isEmpty() {
+        return this.items.stream().allMatch(ItemStack::isEmpty);
+    }
 
-	@Override
-	public boolean isUsableByPlayer(PlayerEntity player) {
-		return false;
-	}
+    @Override
+    public ItemStack getStackInSlot(int index) {
+        return this.items.get(index);
+    }
 
-	@Override
-	public void clear() {
-		
-	}
+    @Override
+    public ItemStack decrStackSize(int index, int count) {
+        return ItemStackHelper.getAndSplit(this.items, index, count);
+    }
 
-	@Override
-	public void tick() {
-		
-	}
+    @Override
+    public ItemStack removeStackFromSlot(int index) {
+        return ItemStackHelper.getAndRemove(this.items, index);
+    }
 
-	@Override
-	public int[] getSlotsForFace(Direction side) {
-		return null;
-	}
+    @Override
+    public void setInventorySlotContents(int index, ItemStack stack) {
+        this.items.set(index, stack);
+    }
 
-	@Override
-	public boolean canInsertItem(int index, ItemStack itemStackIn, Direction direction) {
-		return false;
-	}
+    @Override
+    public boolean isUsableByPlayer(PlayerEntity player) {
+        return true;
+    }
 
-	@Override
-	public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
-		return false;
-	}
+    @Override
+    public void clear() {
+        this.items.clear();
+    }
 
-	@Override
-	protected ITextComponent getDefaultName() {
-		return null;
-	}
-
-	@Override
-	protected Container createMenu(int id, PlayerInventory player) {
-		return null;
-	}
+    @Override
+    protected Container createMenu(int id, PlayerInventory player) {
+        return ChestContainer.createGeneric9X2(id, player);
+    }
 }

@@ -1,33 +1,33 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:stick",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 2
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:item",
-                    "name": "coffeecraft:green_coffee_beans",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:random_chance_with_looting",
-                            "chance": 0.1,
-                            "looting_multiplier": 0.1
-                        }
-                    ]
-                }
-            ]
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:green_coffee_beans",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.1,
+              "looting_multiplier": 0.1
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

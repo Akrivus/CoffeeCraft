@@ -1,13 +1,13 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "coffeecraft:cauldron"
-                }
-            ]
+          "type": "minecraft:item",
+          "name": "coffeecraft:cauldron"
         }
-    ]
+      ]
+    }
+  ]
 }

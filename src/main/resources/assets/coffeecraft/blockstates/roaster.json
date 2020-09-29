@@ -1,12 +1,34 @@
 {
-    "variants": {
-		"facing=north,animated=true": { "model": "coffeecraft:block/roaster_animated" },
-		"facing=north,animated=false": { "model": "coffeecraft:block/roaster" },
-		"facing=south,animated=true": { "model": "coffeecraft:block/roaster_animated", "y": 180 },
-		"facing=south,animated=false": { "model": "coffeecraft:block/roaster", "y": 180 },
-		"facing=west,animated=true": { "model": "coffeecraft:block/roaster_animated", "y": 270 },
-		"facing=west,animated=false": { "model": "coffeecraft:block/roaster", "y": 270 },
-		"facing=east,animated=true": { "model": "coffeecraft:block/roaster_animated", "y": 90 },
-		"facing=east,animated=false": { "model": "coffeecraft:block/roaster", "y": 90 }
-	}
+  "variants": {
+    "facing=north,animated=true": {
+      "model": "coffeecraft:block/roaster_animated"
+    },
+    "facing=north,animated=false": {
+      "model": "coffeecraft:block/roaster"
+    },
+    "facing=south,animated=true": {
+      "model": "coffeecraft:block/roaster_animated",
+      "y": 180
+    },
+    "facing=south,animated=false": {
+      "model": "coffeecraft:block/roaster",
+      "y": 180
+    },
+    "facing=west,animated=true": {
+      "model": "coffeecraft:block/roaster_animated",
+      "y": 270
+    },
+    "facing=west,animated=false": {
+      "model": "coffeecraft:block/roaster",
+      "y": 270
+    },
+    "facing=east,animated=true": {
+      "model": "coffeecraft:block/roaster_animated",
+      "y": 90
+    },
+    "facing=east,animated=false": {
+      "model": "coffeecraft:block/roaster",
+      "y": 90
+    }
+  }
 }

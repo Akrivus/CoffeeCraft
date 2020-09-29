@@ -1,3 +1,112 @@
 {
-    "pools": []
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:green_coffee_beans",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:green_coffee_bag",
+              "properties": {
+                "level": "2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:green_coffee_beans",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:green_coffee_bag",
+              "properties": {
+                "level": "3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:green_coffee_beans",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:green_coffee_bag",
+              "properties": {
+                "level": "4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:green_coffee_beans",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:green_coffee_bag",
+              "properties": {
+                "level": "5"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:green_coffee_beans",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:green_coffee_bag",
+              "properties": {
+                "level": "6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:green_coffee_beans",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:green_coffee_bag",
+              "properties": {
+                "level": "7"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

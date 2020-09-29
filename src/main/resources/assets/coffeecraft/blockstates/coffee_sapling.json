@@ -1,5 +1,7 @@
 {
-	"variants": {
-		"": { "model": "coffeecraft:block/coffee_sapling" }
-	}
+  "variants": {
+    "": {
+      "model": "coffeecraft:block/coffee_sapling"
+    }
+  }
 }

@@ -1,10 +1,21 @@
 {
-	"entity.villager.work_barista": {
-		"subtitle": "subtitles.block.espresso_machine.brew",
-		"sounds": [
-			"coffeecraft:block/decanter/place",
-			"coffeecraft:block/espresso_machine/portafilter",
-			"coffeecraft:block/espresso_machine/steam"
-		]
-	}
+  "entity.villager.work_barista": {
+    "subtitle": "subtitles.block.espresso_machine.brew",
+    "sounds": [
+      "coffeecraft:block/decanter/place",
+      "coffeecraft:block/espresso_machine/portafilter",
+      "coffeecraft:block/espresso_machine/steam"
+    ]
+  },
+  "block.coffee_bag": {
+    "subtitle": "subtitles.block.coffee_bag",
+    "sounds": [
+      "coffeecraft:block/beans1",
+      "coffeecraft:block/beans2",
+      "coffeecraft:block/beans3",
+      "coffeecraft:block/beans4",
+      "coffeecraft:block/beans5",
+      "coffeecraft:block/beans6"
+    ]
+  }
 }

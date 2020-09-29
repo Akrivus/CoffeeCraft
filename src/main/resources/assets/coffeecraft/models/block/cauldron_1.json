@@ -1,6 +1,6 @@
 {
-	"parent": "block/cauldron_level1",
-	"textures": {
-		"water": "coffeecraft:block/cauldron_coffee"
-	}
+  "parent": "block/cauldron_level1",
+  "textures": {
+    "water": "coffeecraft:block/cauldron_coffee"
+  }
 }

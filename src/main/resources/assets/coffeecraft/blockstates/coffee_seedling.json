@@ -1,5 +1,7 @@
 {
-	"variants": {
-		"": { "model": "coffeecraft:block/coffee_seedling" }
-	}
+  "variants": {
+    "": {
+      "model": "coffeecraft:block/coffee_seedling"
+    }
+  }
 }

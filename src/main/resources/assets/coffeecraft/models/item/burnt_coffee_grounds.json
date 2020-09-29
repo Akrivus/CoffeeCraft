@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "coffeecraft:item/burnt_coffee_grounds"
-    }
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "coffeecraft:item/burnt_coffee_grounds"
+  }
 }

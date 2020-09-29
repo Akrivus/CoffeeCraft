@@ -6,12 +6,12 @@ import net.minecraft.tileentity.TileEntity;
 
 public class GooseneckKettleTileEntity extends TileEntity implements ITickableTileEntity {
 
-	public GooseneckKettleTileEntity() {
-		super(CoffeeCraft.TileEntities.GOOSENECK_KETTLE.get());
-	}
+    public GooseneckKettleTileEntity() {
+        super(CoffeeCraft.TileEntities.GOOSENECK_KETTLE.get());
+    }
 
-	@Override
-	public void tick() {
-		
-	}
+    @Override
+    public void tick() {
+
+    }
 }

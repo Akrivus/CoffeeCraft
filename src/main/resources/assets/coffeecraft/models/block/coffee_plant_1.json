@@ -1,6 +1,6 @@
 {
-	"parent": "coffeecraft:block/coffee_plant",
-	"textures": {
-		"branch": "coffeecraft:block/coffee_plant_branch_1"
-	}
+  "parent": "coffeecraft:block/coffee_plant",
+  "textures": {
+    "branch": "coffeecraft:block/coffee_plant_branch_1"
+  }
 }

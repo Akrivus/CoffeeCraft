@@ -1,6 +1,6 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "coffeecraft:item/tamp"
-    }
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "coffeecraft:item/tamp"
+  }
 }

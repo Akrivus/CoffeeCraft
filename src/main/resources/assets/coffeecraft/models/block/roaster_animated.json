@@ -1,7 +1,7 @@
 {
-	"parent": "coffeecraft:block/roaster",
-	"textures": {
-		"crank": "coffeecraft:block/roaster_crank_animated",
-		"barrel": "coffeecraft:block/roaster_barrel_animated"
-	}
+  "parent": "coffeecraft:block/roaster",
+  "textures": {
+    "crank": "coffeecraft:block/roaster_crank_animated",
+    "barrel": "coffeecraft:block/roaster_barrel_animated"
+  }
 }

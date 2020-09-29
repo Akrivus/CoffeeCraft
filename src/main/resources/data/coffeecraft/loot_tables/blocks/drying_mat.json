@@ -1,13 +1,49 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "coffeecraft:drying_mat"
-                }
-            ]
+          "type": "minecraft:item",
+          "name": "coffeecraft:drying_mat"
         }
-    ]
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:dried_coffee_cherries",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:drying_mat",
+              "properties": {
+                "level": "4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:coffee_cherries",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:drying_mat",
+              "properties": {
+                "level": "1,2,3"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,15 +1,25 @@
 {
-    "textures": {
-    	"beans": "coffeecraft:block/green_coffee_beans",
-        "particle": "#beans"
-    },
-    "elements": [
-    	{
-    		"from": [ 2, 0, 2 ],
-            "to": [ 14, 9, 14 ],
-            "faces": {
-                "up": { "texture": "#beans" }
-            }
+  "textures": {
+    "beans": "coffeecraft:block/green_coffee_beans",
+    "particle": "#beans"
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        1,
+        2
+      ],
+      "to": [
+        14,
+        10,
+        14
+      ],
+      "faces": {
+        "up": {
+          "texture": "#beans"
         }
-    ]
+      }
+    }
+  ]
 }
