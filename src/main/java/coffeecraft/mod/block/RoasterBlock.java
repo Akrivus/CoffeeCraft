@@ -103,11 +103,6 @@ public class RoasterBlock extends ContainerBlock {
     }
 
     @Override
-    public boolean isNormalCube(BlockState state, IBlockReader world, BlockPos pos) {
-        return false;
-    }
-
-    @Override
     public VoxelShape getCollisionShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
         if (state.get(FACING).getAxis() == Axis.Z) {
             return Block.makeCuboidShape(1.0D, 0.0D, 3.0D, 15.0D, 10.0D, 13.0D);

@@ -45,7 +45,7 @@ public class DryingMatBlock extends Block implements ISidedInventoryProvider {
     public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
         if (state.get(LEVEL) > 0 && state.get(LEVEL) < 4 && world.getLight(pos) > 8 && !world.isRaining()) {
             if (DRYING_AMPLIFIER.test(world.getBlockState(pos)) || rand.nextInt(3) == 0) {
-                world.setBlockState(pos, state.cycle(LEVEL));
+                world.setBlockState(pos, state.func_235896_a_(LEVEL));
             }
         }
     }
@@ -81,11 +81,6 @@ public class DryingMatBlock extends Block implements ISidedInventoryProvider {
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(LEVEL);
-    }
-
-    @Override
-    public boolean isNormalCube(BlockState state, IBlockReader world, BlockPos pos) {
-        return false;
     }
 
     @Override

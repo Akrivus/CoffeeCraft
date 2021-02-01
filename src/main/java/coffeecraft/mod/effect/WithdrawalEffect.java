@@ -1,7 +1,6 @@
 package coffeecraft.mod.effect;
 
 import coffeecraft.mod.init.CoffeeCraft;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.Effect;
@@ -13,9 +12,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public class WithdrawalEffect extends Effect {
     public WithdrawalEffect() {
         super(EffectType.HARMFUL, 0x331E14);
-        this.addAttributesModifier(SharedMonsterAttributes.MOVEMENT_SPEED, "7E4A2966-06F5-4EF2-AAFE-996D0DBDB891", -0.2D, AttributeModifier.Operation.MULTIPLY_TOTAL);
-        this.addAttributesModifier(SharedMonsterAttributes.ATTACK_SPEED, "AF4A6C76-BF7A-4BC0-8A9E-803DC9FB5E90", -0.5D, AttributeModifier.Operation.MULTIPLY_TOTAL);
-        this.addAttributesModifier(SharedMonsterAttributes.ATTACK_DAMAGE, "1EEFAE80-931A-468D-ACEF-81BE410E6B33", -0.1D, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        //this.addAttributesModifier(SharedMonsterAttributes.MOVEMENT_SPEED, "7E4A2966-06F5-4EF2-AAFE-996D0DBDB891", -0.2D, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        //this.addAttributesModifier(SharedMonsterAttributes.ATTACK_SPEED, "AF4A6C76-BF7A-4BC0-8A9E-803DC9FB5E90", -0.5D, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        //this.addAttributesModifier(SharedMonsterAttributes.ATTACK_DAMAGE, "1EEFAE80-931A-468D-ACEF-81BE410E6B33", -0.1D, AttributeModifier.Operation.MULTIPLY_TOTAL);
     }
 
     @SubscribeEvent

@@ -12,9 +12,9 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
@@ -74,18 +74,13 @@ public class GooseneckKettleBlock extends ContainerBlock {
     }
 
     @Override
-    public boolean isNormalCube(BlockState state, IBlockReader world, BlockPos pos) {
-        return false;
-    }
-
-    @Override
     public Block.OffsetType getOffsetType() {
         return Block.OffsetType.XZ;
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-        Vec3d offset = state.getOffset(world, pos);
+        Vector3d offset = state.getOffset(world, pos);
         return Block.makeCuboidShape(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D).withOffset(offset.x, offset.y, offset.z);
     }
 

@@ -139,11 +139,6 @@ public class CoffeeBagBlock extends Block implements ISidedInventoryProvider {
     }
 
     @Override
-    public boolean isNormalCube(BlockState state, IBlockReader world, BlockPos pos) {
-        return false;
-    }
-
-    @Override
     public VoxelShape getCollisionShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
         return Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D + state.get(LEVEL) * 1.75D, 16.0D);
     }
