@@ -5,9 +5,9 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -54,7 +54,7 @@ public class CoffeeSeedlingBlock extends BushBlock implements IGrowable {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-        Vec3d offset = state.getOffset(world, pos);
+        Vector3d offset = state.getOffset(world, pos);
         return Block.makeCuboidShape(3.0D, 0.0D, 3.0D, 12.0D, 6.0D, 12.0D).withOffset(offset.x, offset.y, offset.z);
     }
 

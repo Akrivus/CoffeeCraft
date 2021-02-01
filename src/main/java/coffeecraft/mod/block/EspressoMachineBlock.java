@@ -42,11 +42,6 @@ public class EspressoMachineBlock extends ContainerBlock {
     }
 
     @Override
-    public boolean isNormalCube(BlockState state, IBlockReader world, BlockPos pos) {
-        return false;
-    }
-
-    @Override
     public VoxelShape getCollisionShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
         switch (state.get(FACING)) {
             case SOUTH:

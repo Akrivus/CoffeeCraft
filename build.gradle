@@ -1,92 +1,61 @@
 buildscript {
-    repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        jcenter()
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
-    }
+  repositories {
+    maven { url = 'https://files.minecraftforge.net/maven' }
+    jcenter()
+    mavenCentral()
+  }
+  dependencies {
+    classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+  }
 }
+
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 
 version = new Date().format('yy.MM.dd')
-archivesBaseName = "CoffeeCraft"
-group = "coffeecraft.mod"
+archivesBaseName = 'CoffeeCraft'
+group = 'coffeecraft'
 
 minecraft {
-    mappings channel: 'snapshot', version: '20200723-1.16.1'
+  mappings channel: 'snapshot', version: '20201028-1.16.3'
 
-    runs {
-        client {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                coffeecraft {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        server {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                coffeecraft {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-            args '--mod', 'coffeecraft', '--all', '--output', file('src/generated/resources/')
-
-            mods {
-                coffeecraft {
-                    source sourceSets.main
-                }
-            }
-        }
+  runs {
+    client {
+      mods { coffeecraft { source sourceSets.main } }
+      workingDirectory project.file('run')
     }
+    data {
+      args '--mod', 'coffeecraft', '--all', '--output', file('src/generated/resources/')
+      mods { coffeecraft { source sourceSets.main } }
+      workingDirectory project.file('run')
+    }
+    server {
+      mods { coffeecraft { source sourceSets.main } }
+      workingDirectory project.file('run')
+    }
+  }
 }
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.2-33.0.5'
-}
-
-jar {
-    manifest {
-        attributes([
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"Akrivus",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-            "Specification-Title": project.name,
-            "Specification-Vendor": "Akrivus",
-            "Specification-Version": "1"
-        ])
-    }
+  minecraft 'net.minecraftforge:forge:1.16.5-36.0.4'
 }
 
 jar.finalizedBy('reobfJar')
 
+jar {
+  manifest {
+    attributes([
+      "Implementation-Title"    :  archivesBaseName,  "Specification-Title"   : archivesBaseName,
+      "Implementation-Vendor"   : "Owen Adrian",      "Specification-Vendor"  : "Owen Adrian",
+      "Implementation-Version"  :  version,           "Specification-Version" : "1",
+      "Implementation-Timestamp":  new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+    ])
+  }
+}
+
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
-    repositories {
-        maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
-        }
-    }
+  repositories { maven { url "file:///${project.projectDir}/mcmodsrepo" } }
+  publications { mavenJava(MavenPublication) { artifact jar } }
 }
