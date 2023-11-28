@@ -1,0 +1,81 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "coffeecraft:block/coffee_bag"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size1"
+      },
+      "when": {
+        "count": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size2"
+      },
+      "when": {
+        "count": "2"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size3"
+      },
+      "when": {
+        "count": "3"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size4"
+      },
+      "when": {
+        "count": "4"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size5"
+      },
+      "when": {
+        "count": "5"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size6"
+      },
+      "when": {
+        "count": "6"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size7"
+      },
+      "when": {
+        "count": "7"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size8"
+      },
+      "when": {
+        "count": "8"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/dark_coffee_beans_size9"
+      },
+      "when": {
+        "count": "9"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "coffeecraft:light_coffee_bag"
+    }
+  ],
+  "result": {
+    "item": "coffeecraft:light_coffee_bean",
+    "count": 7
+  }
+}

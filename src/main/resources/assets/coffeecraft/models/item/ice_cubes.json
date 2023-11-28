@@ -1,0 +1,76 @@
+{
+	"textures": {
+		"all": "minecraft:block/ice",
+		"particle": "#all"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 6],
+			"to": [8, 6, 12],
+			"faces": {
+				"north": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"east": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"south": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"west": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"up": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"down": {"uv": [5, 5, 11, 11], "texture": "#all"}
+			}
+		},
+		{
+			"from": [8, 0, 4],
+			"to": [14, 6, 10],
+			"faces": {
+				"north": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"east": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"south": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"west": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"up": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"down": {"uv": [5, 5, 11, 11], "texture": "#all"}
+			}
+		},
+		{
+			"from": [1, 6, 7],
+			"to": [7, 12, 13],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"east": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"south": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"west": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"up": {"uv": [5, 5, 11, 11], "texture": "#all"},
+				"down": {"uv": [5, 5, 11, 11], "texture": "#all"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [90, -15, 0],
+			"translation": [0, 1, 2],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [90, 15, 0],
+			"translation": [0, 1, 2],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 120, 0],
+			"translation": [0, 5, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 120, 0],
+			"translation": [0, 5, 0]
+		},
+		"ground": {
+			"translation": [0, 0.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [15, -30, 0],
+			"translation": [0, 2, 0]
+		},
+		"fixed": {
+			"rotation": [0, -15, 0]
+		}
+	}
+}

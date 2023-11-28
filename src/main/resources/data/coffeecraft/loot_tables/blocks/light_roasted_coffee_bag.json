@@ -5,104 +5,172 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "coffeecraft:light_roasted_coffee_beans",
+          "name": "coffeecraft:light_coffee_bean",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "coffeecraft:light_roasted_coffee_bag",
+              "block": "coffeecraft:light_coffee_bag",
               "properties": {
-                "level": "2"
+                "count": "1"
               }
             }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "coffeecraft:light_roasted_coffee_beans",
-          "conditions": [
+          ],
+          "functions": [
             {
-              "condition": "minecraft:block_state_property",
-              "block": "coffeecraft:light_roasted_coffee_bag",
-              "properties": {
-                "level": "3"
-              }
+              "function": "minecraft:set_count",
+              "count": 1
             }
           ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
+        },
         {
           "type": "minecraft:item",
-          "name": "coffeecraft:light_roasted_coffee_beans",
+          "name": "coffeecraft:light_coffee_bean",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "coffeecraft:light_roasted_coffee_bag",
+              "block": "coffeecraft:light_coffee_bag",
               "properties": {
-                "level": "4"
+                "count": "2"
               }
             }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "coffeecraft:light_roasted_coffee_beans",
-          "conditions": [
+          ],
+          "functions": [
             {
-              "condition": "minecraft:block_state_property",
-              "block": "coffeecraft:light_roasted_coffee_bag",
-              "properties": {
-                "level": "5"
-              }
+              "function": "minecraft:set_count",
+              "count": 2
             }
           ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
+        },
         {
           "type": "minecraft:item",
-          "name": "coffeecraft:light_roasted_coffee_beans",
+          "name": "coffeecraft:light_coffee_bean",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "coffeecraft:light_roasted_coffee_bag",
+              "block": "coffeecraft:light_coffee_bag",
               "properties": {
-                "level": "6"
+                "count": "3"
               }
             }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 3
+            }
           ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
+        },
         {
           "type": "minecraft:item",
-          "name": "coffeecraft:light_roasted_coffee_beans",
+          "name": "coffeecraft:light_coffee_bean",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "coffeecraft:light_roasted_coffee_bag",
+              "block": "coffeecraft:light_coffee_bag",
               "properties": {
-                "level": "7"
+                "count": "4"
               }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:light_coffee_bean",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:light_coffee_bag",
+              "properties": {
+                "count": "5"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:light_coffee_bean",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:light_coffee_bag",
+              "properties": {
+                "count": "6"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:light_coffee_bean",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:light_coffee_bag",
+              "properties": {
+                "count": "7"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:light_coffee_bean",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:light_coffee_bag",
+              "properties": {
+                "count": "8"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "coffeecraft:light_coffee_bean",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "coffeecraft:light_coffee_bag",
+              "properties": {
+                "count": "9"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 9
             }
           ]
         }

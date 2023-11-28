@@ -1,0 +1,6 @@
+{
+  "parent": "coffeecraft:block/coffee_tree_top",
+  "textures": {
+    "branch": "coffeecraft:block/coffee_branch_with_blooms"
+  }
+}

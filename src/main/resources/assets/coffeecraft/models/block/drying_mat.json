@@ -1,7 +1,7 @@
 {
-  "parent": "block/block",
+  "parent": "minecraft:block/block",
   "textures": {
-    "top": "coffeecraft:block/drying_mat_0",
+    "top": "coffeecraft:block/drying_mat_stage0",
     "side": "coffeecraft:block/drying_mat_side",
     "particle": "#top"
   },

@@ -1,37 +1,62 @@
 package coffeecraft.mod.effect;
 
-import coffeecraft.mod.init.CoffeeCraft;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.EffectType;
-import net.minecraftforge.event.entity.living.PotionEvent.PotionRemoveEvent;
+import coffeecraft.mod.CoffeeCraft;
+import coffeecraft.mod.network.CustomMessenger;
+import coffeecraft.mod.network.message.SJitters;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodData;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
-public class WithdrawalEffect extends Effect {
+import java.util.List;
+
+@Mod.EventBusSubscriber(modid = CoffeeCraft.ID)
+public class WithdrawalEffect extends MobEffect {
     public WithdrawalEffect() {
-        super(EffectType.HARMFUL, 0x331E14);
-        //this.addAttributesModifier(SharedMonsterAttributes.MOVEMENT_SPEED, "7E4A2966-06F5-4EF2-AAFE-996D0DBDB891", -0.2D, AttributeModifier.Operation.MULTIPLY_TOTAL);
-        //this.addAttributesModifier(SharedMonsterAttributes.ATTACK_SPEED, "AF4A6C76-BF7A-4BC0-8A9E-803DC9FB5E90", -0.5D, AttributeModifier.Operation.MULTIPLY_TOTAL);
-        //this.addAttributesModifier(SharedMonsterAttributes.ATTACK_DAMAGE, "1EEFAE80-931A-468D-ACEF-81BE410E6B33", -0.1D, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        super(MobEffectCategory.HARMFUL, 0x3A6F1A);
+        this.addAttributeModifier(Attributes.ATTACK_DAMAGE,
+                "A8875C1A-863F-4797-BEFE-23D8E3D4A995", -1.5D,
+                AttributeModifier.Operation.MULTIPLY_TOTAL);
+        this.addAttributeModifier(Attributes.ATTACK_SPEED,
+                "57C35873-D1D5-4778-841B-24B0648C6DA2", -0.2D,
+                AttributeModifier.Operation.MULTIPLY_TOTAL);
+        this.addAttributeModifier(Attributes.MOVEMENT_SPEED,
+                "E4202982-9C13-4320-9134-2155B025E0B4", -0.2D,
+                AttributeModifier.Operation.MULTIPLY_TOTAL);
+    }
+
+    @Override
+    public boolean isDurationEffectTick(int duration, int amplifier) {
+        return true;
+    }
+
+    @Override
+    public void applyEffectTick(LivingEntity entity, int amplifier) {
+        entity.level.players().forEach(player -> CoffeeCraft.send(player, new SJitters(entity, amplifier + 1)));
+        if (entity instanceof Player player) {
+            FoodData data = player.getFoodData();
+            data.addExhaustion((float) Math.pow(0.02F * amplifier, 2) - 0.5F);
+            if (data.getExhaustionLevel() < 0.0)
+                data.setExhaustion(0.0F);
+        }
+    }
+
+    @Override
+    public List<ItemStack> getCurativeItems() {
+        return List.of();
     }
 
     @SubscribeEvent
     public static void onPlayerAttemptToSleep(PlayerSleepInBedEvent e) {
-        PlayerEntity player = e.getPlayer();
-        if (player.getActivePotionEffect(CoffeeCraft.Potions.WITHDRAWAL.get()) != null) {
-            player.removeActivePotionEffect(CoffeeCraft.Potions.WITHDRAWAL.get());
-        }
-    }
-
-    @SubscribeEvent
-    public static void onPotionRemove(PotionRemoveEvent e) {
-        e.setCanceled(e.getPotion() == CoffeeCraft.Potions.WITHDRAWAL.get());
-    }
-
-    @Override
-    public boolean isReady(int duration, int amplifier) {
-        return true;
+        Player player = e.getPlayer();
+        if (player.hasEffect(AddedEffects.WITHDRAWAL.get()))
+            player.removeEffect(AddedEffects.WITHDRAWAL.get());
     }
 }

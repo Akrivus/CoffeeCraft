@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coffeecraft:block/flavor_pump_empty"
+    },
+    "facing=south": {
+      "model": "coffeecraft:block/flavor_pump_empty",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coffeecraft:block/flavor_pump_empty",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "coffeecraft:block/flavor_pump_empty",
+      "y": 90
+    }
+  }
+}

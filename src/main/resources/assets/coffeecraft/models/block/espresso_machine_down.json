@@ -1,5 +1,5 @@
 {
-  "parent": "block/block",
+  "parent": "minecraft:block/block",
   "textures": {
     "front": "coffeecraft:block/espresso_machine_front",
     "side": "coffeecraft:block/espresso_machine_side",

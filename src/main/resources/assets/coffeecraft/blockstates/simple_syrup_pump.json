@@ -1,0 +1,139 @@
+{
+  "variants": {
+    "fill=0,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill0"
+    },
+    "fill=0,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill0",
+      "y": 180
+    },
+    "fill=0,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill0",
+      "y": 270
+    },
+    "fill=0,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill0",
+      "y": 90
+    },
+    "fill=1,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill1"
+    },
+    "fill=1,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill1",
+      "y": 180
+    },
+    "fill=1,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill1",
+      "y": 270
+    },
+    "fill=1,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill1",
+      "y": 90
+    },
+    "fill=2,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill2"
+    },
+    "fill=2,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill2",
+      "y": 180
+    },
+    "fill=2,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill2",
+      "y": 270
+    },
+    "fill=2,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill2",
+      "y": 90
+    },
+    "fill=3,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill3"
+    },
+    "fill=3,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill3",
+      "y": 180
+    },
+    "fill=3,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill3",
+      "y": 270
+    },
+    "fill=3,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill3",
+      "y": 90
+    },
+    "fill=4,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill4"
+    },
+    "fill=4,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill4",
+      "y": 180
+    },
+    "fill=4,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill4",
+      "y": 270
+    },
+    "fill=4,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill4",
+      "y": 90
+    },
+    "fill=5,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill5"
+    },
+    "fill=5,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill5",
+      "y": 180
+    },
+    "fill=5,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill5",
+      "y": 270
+    },
+    "fill=5,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill5",
+      "y": 90
+    },
+    "fill=6,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill6"
+    },
+    "fill=6,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill6",
+      "y": 180
+    },
+    "fill=6,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill6",
+      "y": 270
+    },
+    "fill=6,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill6",
+      "y": 90
+    },
+    "fill=7,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill7"
+    },
+    "fill=7,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill7",
+      "y": 180
+    },
+    "fill=7,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill7",
+      "y": 270
+    },
+    "fill=7,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill7",
+      "y": 90
+    },
+    "fill=8,facing=north": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill8"
+    },
+    "fill=8,facing=south": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill8",
+      "y": 180
+    },
+    "fill=8,facing=west": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill8",
+      "y": 270
+    },
+    "fill=8,facing=east": {
+      "model": "coffeecraft:block/simple_syrup_pump_fill8",
+      "y": 90
+    }
+  }
+}

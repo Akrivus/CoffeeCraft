@@ -1,5 +1,5 @@
 {
-  "parent": "block/block",
+  "parent": "minecraft:block/block",
   "textures": {
     "side": "coffeecraft:block/roaster_side",
     "crank": "coffeecraft:block/roaster_crank",

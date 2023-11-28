@@ -1,0 +1,6 @@
+{
+  "parent": "coffeecraft:block/drying_mat",
+  "textures": {
+    "top": "coffeecraft:block/drying_mat_stage0w"
+  }
+}

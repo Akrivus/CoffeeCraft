@@ -1,0 +1,8 @@
+{
+	"parent": "coffeecraft:block/chair",
+	"textures": {
+		"legs": "minecraft:block/stripped_warped_stem",
+		"base": "minecraft:block/stripped_warped_stem_top",
+		"wood": "minecraft:block/warped_planks"
+	}
+}

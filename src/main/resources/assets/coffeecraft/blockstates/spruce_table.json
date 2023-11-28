@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "north=false,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/spruce_table"
+    },
+    "north=false,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/spruce_table_w"
+    },
+    "north=false,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/spruce_table_s"
+    },
+    "north=false,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/spruce_table_sw"
+    },
+    "north=false,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/spruce_table_e"
+    },
+    "north=false,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/spruce_table_ew"
+    },
+    "north=false,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/spruce_table_es"
+    },
+    "north=false,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/spruce_table_esw"
+    },
+    "north=true,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/spruce_table_n"
+    },
+    "north=true,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/spruce_table_nw"
+    },
+    "north=true,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/spruce_table_ns"
+    },
+    "north=true,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/spruce_table_nsw"
+    },
+    "north=true,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/spruce_table_ne"
+    },
+    "north=true,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/spruce_table_new"
+    },
+    "north=true,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/spruce_table_nes"
+    },
+    "north=true,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/spruce_table_nesw"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coffeecraft:block/spruce_stool"
+    },
+    "facing=south": {
+      "model": "coffeecraft:block/spruce_stool",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coffeecraft:block/spruce_stool",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "coffeecraft:block/spruce_stool",
+      "y": 90
+    }
+  }
+}

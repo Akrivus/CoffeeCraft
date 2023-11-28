@@ -1,0 +1,45 @@
+{
+	"parent": "minecraft:block/block",
+	"textures": {
+		"pump": "coffeecraft:block/flavor_pump",
+		"particle": "#pump"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 10, 11],
+			"faces": {
+				"north": {"uv": [0, 4, 6, 16], "texture": "#pump"},
+				"east": {"uv": [0, 4, 6, 16], "texture": "#pump"},
+				"south": {"uv": [0, 4, 6, 16], "texture": "#pump"},
+				"west": {"uv": [0, 4, 6, 16], "texture": "#pump"},
+				"up": {"uv": [6, 4, 12, 10], "texture": "#pump"},
+				"down": {"uv": [6, 10, 12, 16], "texture": "#pump"}
+			}
+		},
+		{
+			"from": [8, 10, 4.5],
+			"to": [8, 14, 9.5],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 4], "texture": "#pump"},
+				"east": {"uv": [1, 0, 6, 4], "texture": "#pump"},
+				"south": {"uv": [0, 0, 0, 4], "texture": "#pump"},
+				"west": {"uv": [6, 0, 11, 4], "texture": "#pump"},
+				"up": {"uv": [0, 0, 0, 5], "texture": "#pump"},
+				"down": {"uv": [0, 0, 0, 5], "texture": "#pump"}
+			}
+		},
+		{
+			"from": [6, 1, 6],
+			"to": [10, 7, 10],
+			"faces": {
+				"north": {"uv": [0, 2, 4, 6], "texture": "#fill"},
+				"east": {"uv": [0, 2, 4, 6], "texture": "#fill"},
+				"south": {"uv": [0, 2, 4, 6], "texture": "#fill"},
+				"west": {"uv": [0, 2, 4, 6], "texture": "#fill"},
+				"up": {"uv": [4, 0, 4, 4], "texture": "#fill"},
+				"down": {"uv": [4, 4, 4, 4], "texture": "#fill"}
+			}
+		}
+	]
+}

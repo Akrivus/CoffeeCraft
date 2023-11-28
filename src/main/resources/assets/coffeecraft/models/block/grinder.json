@@ -1,5 +1,5 @@
 {
-  "parent": "block/block",
+  "parent": "minecraft:block/block",
   "textures": {
     "front": "coffeecraft:block/grinder_front",
     "side": "coffeecraft:block/grinder_side",
@@ -827,7 +827,7 @@
     "gui": {
       "rotation": [
         30,
-        -150,
+        -135,
         0
       ],
       "scale": [

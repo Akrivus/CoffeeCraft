@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coffeecraft:block/dark_oak_chair"
+    },
+    "facing=south": {
+      "model": "coffeecraft:block/dark_oak_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coffeecraft:block/dark_oak_chair",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "coffeecraft:block/dark_oak_chair",
+      "y": 90
+    }
+  }
+}

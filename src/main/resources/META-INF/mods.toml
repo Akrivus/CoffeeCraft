@@ -1,12 +1,13 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[37,)"
+license = "MIT"
 
 [[mods]]
 modId="coffeecraft"
 version="${file.jarVersion}"
 displayName="CoffeeCraft"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/coffeecraft"
-logoFile="denseki.png"
+logoFile="coffeecraft.png"
 credits="Credits to Jüdacraz for textures and models."
 authors="Akrivus"
 description='''
@@ -16,12 +17,12 @@ Adds coffee to Minecraft.
 [[dependencies.coffeecraft]]
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.coffeecraft]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.17.1]"
     ordering="NONE"
     side="BOTH"

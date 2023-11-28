@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "coffeecraft:block/acacia_chair"
+    },
+    "facing=south": {
+      "model": "coffeecraft:block/acacia_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coffeecraft:block/acacia_chair",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "coffeecraft:block/acacia_chair",
+      "y": 90
+    }
+  }
+}

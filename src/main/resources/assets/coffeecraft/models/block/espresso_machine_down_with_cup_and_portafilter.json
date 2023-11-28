@@ -1,0 +1,6 @@
+{
+  "parent": "coffeecraft:block/espresso_machine_down",
+  "textures": {
+    "parts": "coffeecraft:block/espresso_machine_parts_with_cup_and_portafilter"
+  }
+}

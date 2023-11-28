@@ -1,0 +1,59 @@
+{
+  "parent": "coffeecraft:block/light_coffee_jar_fill9",
+  "overrides": [
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill0",
+      "predicate": {
+        "damage": 0.000
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill1",
+      "predicate": {
+        "damage": 0.111
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill2",
+      "predicate": {
+        "damage": 0.222
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill3",
+      "predicate": {
+        "damage": 0.333
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill4",
+      "predicate": {
+        "damage": 0.444
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill5",
+      "predicate": {
+        "damage": 0.555
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill6",
+      "predicate": {
+        "damage": 0.666
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill7",
+      "predicate": {
+        "damage": 0.777
+      }
+    },
+    {
+      "model": "coffeecraft:block/light_coffee_jar_fill8",
+      "predicate": {
+        "damage": 0.888
+      }
+    }
+  ]
+}

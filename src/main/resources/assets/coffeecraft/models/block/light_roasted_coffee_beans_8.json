@@ -1,6 +1,0 @@
-{
-  "parent": "coffeecraft:block/coffee_beans_8",
-  "textures": {
-    "beans": "coffeecraft:block/light_roasted_coffee_beans"
-  }
-}

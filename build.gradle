@@ -1,61 +1,46 @@
 buildscript {
-  repositories {
-    maven { url = 'https://files.minecraftforge.net/maven' }
-    jcenter()
-    mavenCentral()
-  }
-  dependencies {
-    classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
-  }
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+    }
+    dependencies {
+		classpath 'net.minecraftforge.gradle:ForgeGradle:5.1+'
+    }
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = new Date().format('yy.MM.dd')
-archivesBaseName = 'CoffeeCraft'
-group = 'coffeecraft'
+group = 'coffeecraft.mod'
+archivesBaseName = 'coffeecraft'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 minecraft {
-  mappings channel: 'snapshot', version: '20201028-1.16.3'
+    mappings channel: 'official', version: '1.17.1'
+	accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
-  runs {
-    client {
-      mods { coffeecraft { source sourceSets.main } }
-      workingDirectory project.file('run')
-    }
-    data {
-      args '--mod', 'coffeecraft', '--all', '--output', file('src/generated/resources/')
-      mods { coffeecraft { source sourceSets.main } }
-      workingDirectory project.file('run')
-    }
-    server {
-      mods { coffeecraft { source sourceSets.main } }
-      workingDirectory project.file('run')
-    }
-  }
+	runs {
+		server { }
+		client { }
+		all {
+			mods { coffeecraft { source sourceSets.main } }
+			workingDirectory file('run')
+		}
+		data {
+			args '--mod', 'block_party', '--all', '--output', file('src/generated/resources/')
+		}
+	}
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories { }
+
 dependencies {
-  minecraft 'net.minecraftforge:forge:1.16.5-36.0.4'
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.78'
 }
 
 jar.finalizedBy('reobfJar')
-
-jar {
-  manifest {
-    attributes([
-      "Implementation-Title"    :  archivesBaseName,  "Specification-Title"   : archivesBaseName,
-      "Implementation-Vendor"   : "Owen Adrian",      "Specification-Vendor"  : "Owen Adrian",
-      "Implementation-Version"  :  version,           "Specification-Version" : "1",
-      "Implementation-Timestamp":  new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-    ])
-  }
-}
-
-publishing {
-  repositories { maven { url "file:///${project.projectDir}/mcmodsrepo" } }
-  publications { mavenJava(MavenPublication) { artifact jar } }
-}

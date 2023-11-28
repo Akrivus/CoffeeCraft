@@ -1,19 +1,244 @@
 {
   "variants": {
-    "level=0": {
-      "model": "coffeecraft:block/drying_mat_0"
+    "stage=0,north=false,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0"
     },
-    "level=1": {
-      "model": "coffeecraft:block/drying_mat_1"
+    "stage=0,north=false,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0w"
     },
-    "level=2": {
-      "model": "coffeecraft:block/drying_mat_2"
+    "stage=0,north=false,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0s"
     },
-    "level=3": {
-      "model": "coffeecraft:block/drying_mat_3"
+    "stage=0,north=false,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0sw"
     },
-    "level=4": {
-      "model": "coffeecraft:block/drying_mat_4"
+    "stage=0,north=false,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0e"
+    },
+    "stage=0,north=false,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0ew"
+    },
+    "stage=0,north=false,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0es"
+    },
+    "stage=0,north=false,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0esw"
+    },
+    "stage=0,north=true,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0n"
+    },
+    "stage=0,north=true,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0nw"
+    },
+    "stage=0,north=true,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0ns"
+    },
+    "stage=0,north=true,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0nw"
+    },
+    "stage=0,north=true,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0ne"
+    },
+    "stage=0,north=true,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0new"
+    },
+    "stage=0,north=true,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage0nes"
+    },
+    "stage=0,north=true,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage0nesw"
+    },
+    "stage=1,north=false,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1"
+    },
+    "stage=1,north=false,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1w"
+    },
+    "stage=1,north=false,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1s"
+    },
+    "stage=1,north=false,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1sw"
+    },
+    "stage=1,north=false,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1e"
+    },
+    "stage=1,north=false,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1ew"
+    },
+    "stage=1,north=false,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1es"
+    },
+    "stage=1,north=false,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1esw"
+    },
+    "stage=1,north=true,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1n"
+    },
+    "stage=1,north=true,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1nw"
+    },
+    "stage=1,north=true,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1ns"
+    },
+    "stage=1,north=true,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1nsw"
+    },
+    "stage=1,north=true,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1ne"
+    },
+    "stage=1,north=true,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1new"
+    },
+    "stage=1,north=true,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage1nes"
+    },
+    "stage=1,north=true,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage1nesw"
+    },
+    "stage=2,north=false,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2"
+    },
+    "stage=2,north=false,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2w"
+    },
+    "stage=2,north=false,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2s"
+    },
+    "stage=2,north=false,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2sw"
+    },
+    "stage=2,north=false,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2e"
+    },
+    "stage=2,north=false,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2ew"
+    },
+    "stage=2,north=false,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2es"
+    },
+    "stage=2,north=false,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2esw"
+    },
+    "stage=2,north=true,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2n"
+    },
+    "stage=2,north=true,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2nw"
+    },
+    "stage=2,north=true,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2ns"
+    },
+    "stage=2,north=true,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2nsw"
+    },
+    "stage=2,north=true,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2ne"
+    },
+    "stage=2,north=true,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2new"
+    },
+    "stage=2,north=true,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage2nes"
+    },
+    "stage=2,north=true,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage2nesw"
+    },
+    "stage=3,north=false,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3"
+    },
+    "stage=3,north=false,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3w"
+    },
+    "stage=3,north=false,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3s"
+    },
+    "stage=3,north=false,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3sw"
+    },
+    "stage=3,north=false,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3e"
+    },
+    "stage=3,north=false,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3ew"
+    },
+    "stage=3,north=false,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3es"
+    },
+    "stage=3,north=false,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3esw"
+    },
+    "stage=3,north=true,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3n"
+    },
+    "stage=3,north=true,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3nw"
+    },
+    "stage=3,north=true,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3ns"
+    },
+    "stage=3,north=true,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3nsw"
+    },
+    "stage=3,north=true,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3ne"
+    },
+    "stage=3,north=true,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3new"
+    },
+    "stage=3,north=true,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage3nes"
+    },
+    "stage=3,north=true,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage3nesw"
+    },
+    "stage=4,north=false,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4"
+    },
+    "stage=4,north=false,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4w"
+    },
+    "stage=4,north=false,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4s"
+    },
+    "stage=4,north=false,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4sw"
+    },
+    "stage=4,north=false,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4e"
+    },
+    "stage=4,north=false,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4ew"
+    },
+    "stage=4,north=false,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4es"
+    },
+    "stage=4,north=false,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4esw"
+    },
+    "stage=4,north=true,east=false,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4n"
+    },
+    "stage=4,north=true,east=false,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4nw"
+    },
+    "stage=4,north=true,east=false,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4ns"
+    },
+    "stage=4,north=true,east=false,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4nsw"
+    },
+    "stage=4,north=true,east=true,south=false,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4ne"
+    },
+    "stage=4,north=true,east=true,south=false,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4new"
+    },
+    "stage=4,north=true,east=true,south=true,west=false": {
+      "model": "coffeecraft:block/drying_mat_stage4nes"
+    },
+    "stage=4,north=true,east=true,south=true,west=true": {
+      "model": "coffeecraft:block/drying_mat_stage4nesw"
     }
   }
 }

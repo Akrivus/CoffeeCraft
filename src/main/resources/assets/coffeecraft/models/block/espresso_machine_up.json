@@ -1,9 +1,9 @@
 {
-  "parent": "block/block",
+  "parent": "minecraft:block/block",
   "textures": {
     "front": "coffeecraft:block/espresso_machine_front",
     "side": "coffeecraft:block/espresso_machine_side",
-    "parts": "coffeecraft:block/espresso_machine_cups",
+    "parts": "coffeecraft:block/espresso_machine_parts",
     "top": "coffeecraft:block/espresso_machine_top",
     "back": "coffeecraft:block/espresso_machine_back",
     "bottom": "coffeecraft:block/espresso_machine_bottom",

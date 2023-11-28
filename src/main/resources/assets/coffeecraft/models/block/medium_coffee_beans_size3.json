@@ -1,0 +1,6 @@
+{
+  "parent": "coffeecraft:block/coffee_beans_size3",
+  "textures": {
+    "beans": "coffeecraft:block/medium_coffee_beans"
+  }
+}

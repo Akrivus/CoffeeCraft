@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "fill=0": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill0"
+    },
+    "fill=1": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill1"
+    },
+    "fill=2": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill2"
+    },
+    "fill=3": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill3"
+    },
+    "fill=4": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill4"
+    },
+    "fill=5": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill5"
+    },
+    "fill=6": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill6"
+    },
+    "fill=7": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill7"
+    },
+    "fill=8": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill8"
+    },
+    "fill=9": {
+      "model": "coffeecraft:block/medium_coffee_jar_fill9"
+    }
+  }
+}

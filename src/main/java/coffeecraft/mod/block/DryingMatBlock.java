@@ -1,145 +1,156 @@
 package coffeecraft.mod.block;
 
-import coffeecraft.mod.init.CoffeeCraft;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.inventory.ISidedInventoryProvider;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.util.*;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
+import coffeecraft.mod.block.inventory.DryingMatInventory;
+import coffeecraft.mod.items.AddedItems;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.WorldlyContainerHolder;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.server.level.ServerLevel;
 
+import java.util.Map;
 import java.util.Random;
-import java.util.function.Predicate;
 
-public class DryingMatBlock extends Block implements ISidedInventoryProvider {
-    public static final IntegerProperty LEVEL = IntegerProperty.create("level", 0, 4);
-    public static final Predicate<BlockState> DRYING_AMPLIFIER = (input) -> {
-        if (input.getBlock().equals(Blocks.SCAFFOLDING) || input.getBlock().equals(Blocks.HOPPER) || input.getBlock().isIn(BlockTags.FENCES)) {
-            return true;
-        } else {
-            return false;
-        }
-    };
+import net.minecraft.Util;
+import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+
+public class DryingMatBlock extends Block implements WorldlyContainerHolder {
+    public static final IntegerProperty STAGE = IntegerProperty.create("stage", 0, 4);
+    public static final BooleanProperty NORTH = BlockStateProperties.NORTH;
+    public static final BooleanProperty EAST = BlockStateProperties.EAST;
+    public static final BooleanProperty SOUTH = BlockStateProperties.SOUTH;
+    public static final BooleanProperty WEST = BlockStateProperties.WEST;
+    protected static final Map<Direction, BooleanProperty> FACING_TO_PROPERTY_MAP = ImmutableMap.copyOf(Util.make(Maps.newEnumMap(Direction.class), (p_55164_) -> {
+        p_55164_.put(Direction.NORTH, NORTH);
+        p_55164_.put(Direction.EAST, EAST);
+        p_55164_.put(Direction.SOUTH, SOUTH);
+        p_55164_.put(Direction.WEST, WEST);
+    }));
 
     public DryingMatBlock() {
-        super(Properties.create(Material.WOOL).tickRandomly().hardnessAndResistance(0.1F).sound(SoundType.CLOTH));
+        super(Properties.of(Material.WOOL)
+                .randomTicks()
+                .strength(0.1F)
+                .sound(SoundType.WOOL));
+        this.registerDefaultState(this.stateDefinition
+                .any()
+                .setValue(STAGE, 0)
+                .setValue(NORTH, false)
+                .setValue(EAST, false)
+                .setValue(SOUTH, false)
+                .setValue(WEST, false));
     }
 
     @Override
-    public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
-        if (state.get(LEVEL) > 0 && state.get(LEVEL) < 4 && world.getLight(pos) > 8 && !world.isRaining()) {
-            if (DRYING_AMPLIFIER.test(world.getBlockState(pos)) || rand.nextInt(3) == 0) {
-                world.setBlockState(pos, state.func_235896_a_(LEVEL));
-            }
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random rand) {
+        if (state.getValue(STAGE) > 0 && state.getValue(STAGE) < 4 && level.getMaxLocalRawBrightness(pos) > 8) {
+            level.setBlockAndUpdate(pos, state.cycle(STAGE));
         }
     }
 
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result) {
-        ItemStack stack = player.getHeldItem(hand);
-        if (state.get(LEVEL) == 0 && stack.getItem() == CoffeeCraft.Items.COFFEE_CHERRIES.get()) {
-            world.playSound(null, pos, SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.BLOCKS, 1.0F, 0.8F + world.rand.nextFloat() * 0.4F);
-            world.setBlockState(pos, state.with(LEVEL, 1));
-            if (!player.abilities.isCreativeMode) {
-                stack.shrink(1);
-            }
-            return ActionResultType.SUCCESS;
-        } else if (state.get(LEVEL) == 4) {
-            spawnAsEntity(world, pos, new ItemStack(CoffeeCraft.Items.DRIED_COFFEE_CHERRIES.get(), 1));
-            world.setBlockState(pos, state.with(LEVEL, 0));
-            return ActionResultType.SUCCESS;
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
+        ItemStack stack = player.getItemInHand(hand);
+        if (state.getValue(STAGE) == 0 && stack.getItem() == AddedItems.COFFEE_CHERRIES.get()) {
+            level.setBlockAndUpdate(pos, state.setValue(STAGE, 1));
+            stack.shrink(player.getAbilities().instabuild ? 0 : 1);
+            return InteractionResult.SUCCESS;
+        } else if (state.getValue(STAGE) == 4) {
+            popResource(level, pos, new ItemStack(AddedItems.GREEN_COFFEE_BEAN.get(), 1));
+            level.setBlockAndUpdate(pos, state.setValue(STAGE, 0));
+            return InteractionResult.SUCCESS;
         }
-        return super.onBlockActivated(state, world, pos, player, hand, result);
+        return super.use(state, level, pos, player, hand, result);
     }
 
     @Override
-    public boolean hasComparatorInputOverride(BlockState state) {
-        return true;
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float distance) {
+        super.fallOn(level, state, pos, entity, distance);
+        state = state.cycle(STAGE);
+        if (state.getValue(STAGE) == 4) {
+            popResource(level, pos, new ItemStack(AddedItems.GREEN_COFFEE_BEAN.get(), 1));
+            level.setBlockAndUpdate(pos, state.setValue(STAGE, 0));
+        }
     }
 
     @Override
-    public int getComparatorInputOverride(BlockState state, World world, BlockPos pos) {
-        return state.get(LEVEL);
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
+        level.setBlockAndUpdate(pos, state
+                .setValue(NORTH, canConnectTo(level, pos.north()))
+                .setValue(EAST, canConnectTo(level, pos.east()))
+                .setValue(SOUTH, canConnectTo(level, pos.south()))
+                .setValue(WEST, canConnectTo(level, pos.west())));
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(LEVEL);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(STAGE, NORTH, EAST, SOUTH, WEST);
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-        return Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockGetter level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        return super.getStateForPlacement(context).setValue(STAGE, 0)
+                .setValue(NORTH, this.canConnectTo(level, pos.north()))
+                .setValue(EAST, this.canConnectTo(level, pos.east()))
+                .setValue(SOUTH, this.canConnectTo(level, pos.south()))
+                .setValue(WEST, this.canConnectTo(level, pos.west()));
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor world, BlockPos currentPos, BlockPos facingPos) {
+        return facing.getAxis().getPlane() == Direction.Plane.HORIZONTAL ? state.setValue(FACING_TO_PROPERTY_MAP.get(facing), canConnectTo(world, facingPos)) : super.updateShape(state, facing, facingState, world, currentPos, facingPos);
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        return Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return this.getCollisionShape(state, world, pos, context);
     }
 
     @Override
-    public ISidedInventory createInventory(BlockState state, IWorld world, BlockPos pos) {
-        return new DryingMatInventory(state, world, pos, state.get(LEVEL) == 4);
+    public boolean hasAnalogOutputSignal(BlockState state) {
+        return true;
     }
 
-    static class DryingMatInventory extends Inventory implements ISidedInventory {
-        private final BlockState state;
-        private final IWorld world;
-        private final BlockPos pos;
-        private boolean hasPits;
+    @Override
+    public int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
+        return state.getValue(STAGE);
+    }
 
-        public DryingMatInventory(BlockState state, IWorld world, BlockPos pos, boolean hasPits) {
-            super(hasPits ? new ItemStack(CoffeeCraft.Items.DRIED_COFFEE_CHERRIES.get()) : ItemStack.EMPTY);
-            this.state = state;
-            this.world = world;
-            this.pos = pos;
-            this.hasPits = hasPits;
-        }
+    @Override
+    public WorldlyContainer getContainer(BlockState state, LevelAccessor world, BlockPos pos) {
+        return new DryingMatInventory(state, world, pos, state.getValue(STAGE) == 4);
+    }
 
-        @Override
-        public int getInventoryStackLimit() {
-            return 1;
-        }
-
-        @Override
-        public int[] getSlotsForFace(Direction side) {
-            if (this.hasPits && side == Direction.DOWN) {
-                return new int[1];
-            } else {
-                return new int[0];
-            }
-        }
-
-        @Override
-        public boolean canInsertItem(int index, ItemStack stack, Direction side) {
-            return false;
-        }
-
-        @Override
-        public boolean canExtractItem(int index, ItemStack stack, Direction side) {
-            return this.hasPits && side == Direction.DOWN && stack.getItem() == CoffeeCraft.Items.DRIED_COFFEE_CHERRIES.get();
-        }
-
-        @Override
-        public void markDirty() {
-            this.world.setBlockState(this.pos, this.state.with(LEVEL, 0), 3);
-            this.hasPits = false;
-        }
+    private boolean canConnectTo(BlockGetter world, BlockPos pos) {
+        BlockState state = world.getBlockState(pos);
+        return state.is(this);
     }
 }

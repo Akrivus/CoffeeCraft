@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "half=upper,age=0": {
+      "model": "coffeecraft:block/coffee_tree_top"
+    },
+    "half=lower,age=0": {
+      "model": "coffeecraft:block/coffee_tree"
+    },
+    "half=upper,age=1": {
+      "model": "coffeecraft:block/coffee_tree_top_with_blooms"
+    },
+    "half=lower,age=1": {
+      "model": "coffeecraft:block/coffee_tree_with_blooms"
+    },
+    "half=upper,age=2": {
+      "model": "coffeecraft:block/coffee_tree_top_with_buds"
+    },
+    "half=lower,age=2": {
+      "model": "coffeecraft:block/coffee_tree_with_buds"
+    },
+    "half=upper,age=3": {
+      "model": "coffeecraft:block/coffee_tree_top_with_cherries"
+    },
+    "half=lower,age=3": {
+      "model": "coffeecraft:block/coffee_tree_with_cherries"
+    }
+  }
+}

@@ -1,123 +1,123 @@
 {
   "variants": {
     "facing=north,brewing=false,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_0"
+      "model": "coffeecraft:block/espresso_machine_up"
     },
     "facing=north,brewing=false,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_1"
+      "model": "coffeecraft:block/espresso_machine_up_with_cup"
     },
     "facing=north,brewing=false,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_2"
+      "model": "coffeecraft:block/espresso_machine_up_with_portafilter"
     },
     "facing=north,brewing=false,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_3"
+      "model": "coffeecraft:block/espresso_machine_up_with_cup_and_portafilter"
     },
     "facing=north,brewing=true,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_4"
+      "model": "coffeecraft:block/espresso_machine_down"
     },
     "facing=north,brewing=true,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_5"
+      "model": "coffeecraft:block/espresso_machine_down_with_cup"
     },
     "facing=north,brewing=true,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_6"
+      "model": "coffeecraft:block/espresso_machine_down_with_portafilter"
     },
     "facing=north,brewing=true,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_7"
+      "model": "coffeecraft:block/espresso_machine_down_with_cup_and_portafilter"
     },
     "facing=south,brewing=false,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_0",
+      "model": "coffeecraft:block/espresso_machine_up",
       "y": 180
     },
     "facing=south,brewing=false,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_1",
+      "model": "coffeecraft:block/espresso_machine_up_with_cup",
       "y": 180
     },
     "facing=south,brewing=false,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_2",
+      "model": "coffeecraft:block/espresso_machine_up_with_portafilter",
       "y": 180
     },
     "facing=south,brewing=false,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_3",
+      "model": "coffeecraft:block/espresso_machine_up_with_cup_and_portafilter",
       "y": 180
     },
     "facing=south,brewing=true,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_4",
+      "model": "coffeecraft:block/espresso_machine_down",
       "y": 180
     },
     "facing=south,brewing=true,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_5",
+      "model": "coffeecraft:block/espresso_machine_down_with_cup",
       "y": 180
     },
     "facing=south,brewing=true,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_6",
+      "model": "coffeecraft:block/espresso_machine_down_with_portafilter",
       "y": 180
     },
     "facing=south,brewing=true,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_7",
+      "model": "coffeecraft:block/espresso_machine_down_with_cup_and_portafilter",
       "y": 180
     },
     "facing=west,brewing=false,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_0",
+      "model": "coffeecraft:block/espresso_machine_up",
       "y": 270
     },
     "facing=west,brewing=false,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_1",
+      "model": "coffeecraft:block/espresso_machine_up_with_cup",
       "y": 270
     },
     "facing=west,brewing=false,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_2",
+      "model": "coffeecraft:block/espresso_machine_up_with_portafilter",
       "y": 270
     },
     "facing=west,brewing=false,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_3",
+      "model": "coffeecraft:block/espresso_machine_up_with_cup_and_portafilter",
       "y": 270
     },
     "facing=west,brewing=true,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_4",
+      "model": "coffeecraft:block/espresso_machine_down",
       "y": 270
     },
     "facing=west,brewing=true,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_5",
+      "model": "coffeecraft:block/espresso_machine_down_with_cup",
       "y": 270
     },
     "facing=west,brewing=true,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_6",
+      "model": "coffeecraft:block/espresso_machine_down_with_portafilter",
       "y": 270
     },
     "facing=west,brewing=true,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_7",
+      "model": "coffeecraft:block/espresso_machine_down_with_cup_and_portafilter",
       "y": 270
     },
     "facing=east,brewing=false,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_0",
+      "model": "coffeecraft:block/espresso_machine_up",
       "y": 90
     },
     "facing=east,brewing=false,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_1",
+      "model": "coffeecraft:block/espresso_machine_up_with_cup",
       "y": 90
     },
     "facing=east,brewing=false,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_2",
+      "model": "coffeecraft:block/espresso_machine_up_with_portafilter",
       "y": 90
     },
     "facing=east,brewing=false,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_3",
+      "model": "coffeecraft:block/espresso_machine_up_with_cup_and_portafilter",
       "y": 90
     },
     "facing=east,brewing=true,portafilter=false,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_4",
+      "model": "coffeecraft:block/espresso_machine_down",
       "y": 90
     },
     "facing=east,brewing=true,portafilter=false,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_5",
+      "model": "coffeecraft:block/espresso_machine_down_with_cup",
       "y": 90
     },
     "facing=east,brewing=true,portafilter=true,cup=false": {
-      "model": "coffeecraft:block/espresso_machine_6",
+      "model": "coffeecraft:block/espresso_machine_down_with_portafilter",
       "y": 90
     },
     "facing=east,brewing=true,portafilter=true,cup=true": {
-      "model": "coffeecraft:block/espresso_machine_7",
+      "model": "coffeecraft:block/espresso_machine_down_with_cup_and_portafilter",
       "y": 90
     }
   }

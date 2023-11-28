@@ -1,0 +1,6 @@
+{
+  "parent": "coffeecraft:block/flavor_pump_fill4",
+  "textures": {
+    "fill": "coffeecraft:block/fill_honey"
+  }
+}

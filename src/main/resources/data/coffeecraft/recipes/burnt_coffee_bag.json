@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B B",
+    "B B",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "coffeecraft:burnt_coffee_bean"
+    }
+  },
+  "result": {
+    "item": "coffeecraft:burnt_coffee_bag",
+    "count": 1
+  }
+}

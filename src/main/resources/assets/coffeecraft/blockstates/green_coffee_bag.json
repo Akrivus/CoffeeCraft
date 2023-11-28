@@ -7,66 +7,74 @@
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_1"
+        "model": "coffeecraft:block/green_coffee_beans_size1"
       },
       "when": {
-        "level": "1"
+        "count": "1"
       }
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_2"
+        "model": "coffeecraft:block/green_coffee_beans_size2"
       },
       "when": {
-        "level": "2"
+        "count": "2"
       }
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_3"
+        "model": "coffeecraft:block/green_coffee_beans_size3"
       },
       "when": {
-        "level": "3"
+        "count": "3"
       }
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_4"
+        "model": "coffeecraft:block/green_coffee_beans_size4"
       },
       "when": {
-        "level": "4"
+        "count": "4"
       }
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_5"
+        "model": "coffeecraft:block/green_coffee_beans_size5"
       },
       "when": {
-        "level": "5"
+        "count": "5"
       }
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_6"
+        "model": "coffeecraft:block/green_coffee_beans_size6"
       },
       "when": {
-        "level": "6"
+        "count": "6"
       }
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_7"
+        "model": "coffeecraft:block/green_coffee_beans_size7"
       },
       "when": {
-        "level": "7"
+        "count": "7"
       }
     },
     {
       "apply": {
-        "model": "coffeecraft:block/green_coffee_beans_8"
+        "model": "coffeecraft:block/green_coffee_beans_size8"
       },
       "when": {
-        "level": "8"
+        "count": "8"
+      }
+    },
+    {
+      "apply": {
+        "model": "coffeecraft:block/green_coffee_beans_size9"
+      },
+      "when": {
+        "count": "9"
       }
     }
   ]

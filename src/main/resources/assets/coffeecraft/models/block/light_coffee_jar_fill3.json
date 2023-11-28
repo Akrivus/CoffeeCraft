@@ -1,0 +1,6 @@
+{
+	"parent": "coffeecraft:block/coffee_jar_fill3",
+	"textures": {
+		"fill": "coffeecraft:block/light_coffee_grounds"
+	}
+}

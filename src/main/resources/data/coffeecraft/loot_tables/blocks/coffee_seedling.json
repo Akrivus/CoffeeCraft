@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "coffeecraft:green_coffee_beans"
+          "name": "coffeecraft:green_coffee_bean"
         }
       ]
     }

@@ -18,7 +18,7 @@
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "coffeecraft:coffee_plant",
+              "block": "coffeecraft:coffee_tree",
               "properties": {
                 "age": "3"
               }

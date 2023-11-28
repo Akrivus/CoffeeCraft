@@ -1,0 +1,53 @@
+{
+  "parent": "coffeecraft:block/simple_syrup_pump_fill8",
+  "overrides": [
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill0",
+      "predicate": {
+        "damage": 0.0
+      }
+    },
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill1",
+      "predicate": {
+        "damage": 0.125
+      }
+    },
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill2",
+      "predicate": {
+        "damage": 0.25
+      }
+    },
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill3",
+      "predicate": {
+        "damage": 0.375
+      }
+    },
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill4",
+      "predicate": {
+        "damage": 0.5
+      }
+    },
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill5",
+      "predicate": {
+        "damage": 0.625
+      }
+    },
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill6",
+      "predicate": {
+        "damage": 0.75
+      }
+    },
+    {
+      "model": "coffeecraft:block/simple_syrup_pump_fill7",
+      "predicate": {
+        "damage": 0.875
+      }
+    }
+  ]
+}

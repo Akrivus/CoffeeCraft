@@ -1,3 +1,6 @@
 {
-  "parent": "coffeecraft:block/coffee_plant"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "coffeecraft:block/coffee_plant"
+  }
 }

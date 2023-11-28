@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "coffeecraft:block/coffee_sapling"
-  }
-}

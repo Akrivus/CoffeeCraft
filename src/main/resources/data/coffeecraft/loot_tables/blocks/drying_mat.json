@@ -20,7 +20,7 @@
               "condition": "minecraft:block_state_property",
               "block": "coffeecraft:drying_mat",
               "properties": {
-                "level": "4"
+                "stage": "4"
               }
             }
           ]
@@ -38,7 +38,7 @@
               "condition": "minecraft:block_state_property",
               "block": "coffeecraft:drying_mat",
               "properties": {
-                "level": "1,2,3"
+                "stage": "1,2,3"
               }
             }
           ]

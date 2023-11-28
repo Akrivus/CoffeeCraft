@@ -1,5 +1,5 @@
 {
-  "parent": "block/block",
+  "parent": "minecraft:block/block",
   "textures": {
     "side": "coffeecraft:block/coffee_bag_side",
     "inside": "coffeecraft:block/coffee_bag_bottom",
@@ -9,16 +9,8 @@
   },
   "elements": [
     {
-      "from": [
-        0,
-        0,
-        0
-      ],
-      "to": [
-        16,
-        2,
-        16
-      ],
+      "from": [0, 0, 0],
+      "to": [16, 2, 16],
       "faces": {
         "up": {
           "texture": "#inside"
@@ -29,16 +21,8 @@
       }
     },
     {
-      "from": [
-        0,
-        0,
-        0
-      ],
-      "to": [
-        2,
-        16,
-        16
-      ],
+      "from": [0, 0, 0],
+      "to": [2, 16, 16],
       "faces": {
         "up": {
           "texture": "#top"
@@ -58,16 +42,8 @@
       }
     },
     {
-      "from": [
-        14,
-        0,
-        0
-      ],
-      "to": [
-        16,
-        16,
-        16
-      ],
+      "from": [14, 0, 0],
+      "to": [16, 16, 16],
       "faces": {
         "up": {
           "texture": "#top"
@@ -87,16 +63,8 @@
       }
     },
     {
-      "from": [
-        2,
-        0,
-        0
-      ],
-      "to": [
-        14,
-        16,
-        2
-      ],
+      "from": [2, 0, 0],
+      "to": [14, 16, 2],
       "faces": {
         "up": {
           "texture": "#top"
@@ -110,16 +78,8 @@
       }
     },
     {
-      "from": [
-        2,
-        0,
-        14
-      ],
-      "to": [
-        14,
-        16,
-        16
-      ],
+      "from": [2, 0, 14],
+      "to": [14, 16, 16],
       "faces": {
         "up": {
           "texture": "#top"

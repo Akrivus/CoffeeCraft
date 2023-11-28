@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B B",
+    "B B",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "coffeecraft:green_coffee_bean"
+    }
+  },
+  "result": {
+    "item": "coffeecraft:green_coffee_bag",
+    "count": 1
+  }
+}
